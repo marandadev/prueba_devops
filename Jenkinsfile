@@ -5,7 +5,7 @@ pipeline {
     JAVA_HOME = tool name: 'JDK-24', type: 'jdk'
     PATH = "${JAVA_HOME}/bin:${env.PATH}"
     SONARQUBE_URL = 'http://host.docker.internal:9000'
-    SONARQUBE_TOKEN = 'sqp_8b27d397a875f1ed23c038d03bc94cdbd70dd7f7' // Define este secreto en Jenkins
+    SONARQUBE_TOKEN = 'sqa_aaf1256b197f7d9b16ee542ab97e2782aad46b77' // Define este secreto en Jenkins
   }
 
   stages {

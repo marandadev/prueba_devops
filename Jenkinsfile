@@ -48,6 +48,9 @@ pipeline {
     stage('Instalar Chrome y ChromeDriver') {
       steps {
         sh '''
+          apt-get update
+          apt-get install sudo -y
+          sudo apt-get install snapd -y
           snap install chromium
           chromium --version
           wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip

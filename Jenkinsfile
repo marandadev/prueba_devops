@@ -51,12 +51,12 @@ pipeline {
           apt-get update
           apt-get install sudo -y
           sudo apt-get install snapd -y
-          snap install chromium
+          sudo snap install chromium
           chromium --version
           wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip
-          mv chromedriver /usr/local/bin/
-          chmod +x /usr/local/bin/chromedriver
+          sudo mv chromedriver /usr/local/bin/
+          sudo chmod +x /usr/local/bin/chromedriver
         '''
       }
     }

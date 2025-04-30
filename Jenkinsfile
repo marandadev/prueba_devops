@@ -48,12 +48,12 @@ pipeline {
     stage('Instalar Chrome y ChromeDriver') {
       steps {
         sh '''
-          sudo snap install chromium
+          snap install chromium
           chromium --version
           wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip
-          sudo mv chromedriver /usr/local/bin/
-          sudo chmod +x /usr/local/bin/chromedriver
+          mv chromedriver /usr/local/bin/
+          chmod +x /usr/local/bin/chromedriver
         '''
       }
     }
